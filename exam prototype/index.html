@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- 
+    META TAGS
+    - charset: Specifies character encoding (UTF-8 supports all languages/symbols)
+    - viewport: Makes the page responsive on mobile devices
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- 
+    TITLE
+    - Appears in browser tab
+    - Important for accessibility and SEO
+    -->
+    <title>Rhythm Pattern Game</title>
+    
+    <!-- 
+    GOOGLE FONTS
+    - These <link> tags load the Bebas Neue font from Google Fonts
+    - preconnect: Establishes early connection to font server for faster loading
+    - crossorigin: Required for cross-origin resource requests
+    -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    
+    <!-- 
+    CSS STYLESHEET
+    - Links external CSS file for styling
+    - rel="stylesheet" tells browser this is CSS
+    -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 
+    MAIN GAME CONTAINER
+    - This div wraps all game elements
+    - ID allows us to target it in CSS and JavaScript
+    - IDs should be unique on the page
+    -->
+    <div id="game">
+        
+        <!-- 
+        PATTERN DISPLAY
+        - Shows the current rhythm pattern (L and R letters)
+        - JavaScript updates this dynamically using innerHTML
+        - ID "pattern" is referenced in settings.patternEl
+        -->
+        <div id="pattern">Pattern: ???</div>
+        
+        <!-- 
+        SCORE DISPLAY
+        - Shows score, target, and missed patterns
+        - JavaScript updates this using textContent
+        - ID "score" is referenced in settings.scoreEl
+        -->
+        <div id="score">Score: 0</div>
+        
+        <!-- 
+        INSTRUCTIONS
+        - Static text explaining how to play
+        - Tells player which keys to use
+        - Not manipulated by JavaScript
+        -->
+        <div id="instructions">Left keys (Q/W/E) vs Right keys (I/O/P) - Match the rhythm! Press SPACE to restart</div>
+    </div>
+    
+    <!-- 
+    JAVASCRIPT FILE
+    - Loads external JavaScript file
+    - Placed at end of body so DOM elements load first
+    - JavaScript can then access all HTML elements
+    - src="script.js" tells browser where to find the code
+    -->
+    <script src="script.js"></script>
+</body>
+</html>

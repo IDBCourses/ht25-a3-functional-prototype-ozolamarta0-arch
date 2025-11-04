@@ -1,0 +1,149 @@
+/* 
+====================================
+BODY ELEMENT - Main container
+====================================
+This styles the entire page background and layout
+*/
+body {
+    /* LAYOUT: Remove default browser margins */
+    margin: 0;
+    
+    /* COLOR: White background for clean look */
+    background: white;
+    
+    /* SCROLLING: Hide scrollbars (game fits on one screen) */
+    overflow: hidden;
+    
+    /* TYPOGRAPHY: Use Bebas Neue font (loaded from Google Fonts in HTML)
+       - sans-serif is fallback if font fails to load */
+    font-family: 'Bebas Neue', sans-serif;
+    
+    /* FLEXBOX LAYOUT: Centers content horizontally and vertically
+       - display: flex turns body into flex container
+       - align-items: centers vertically
+       - justify-content: centers horizontally */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    /* SIZING: Make body fill entire viewport height
+       - vh = viewport height (100vh = 100% of screen height) */
+    height: 100vh;
+}
+
+/* 
+====================================
+GAME CONTAINER
+====================================
+Wrapper for all game elements
+*/
+#game {
+    /* TEXT ALIGNMENT: Center all text inside this container */
+    text-align: center;
+}
+
+/* 
+====================================
+PATTERN DISPLAY
+====================================
+Shows the current rhythm pattern (L and R letters)
+This is the main visual focus of the game
+*/
+#pattern {
+    /* TYPOGRAPHY: Large bold text for visibility */
+    font-size: 72px;
+    font-weight: bold;
+    
+    /* SPACING: Add space below pattern display */
+    margin-bottom: 40px;
+    
+    /* SIZING: Reserve minimum height even when empty
+       - Prevents layout jump when content changes */
+    min-height: 100px;
+    
+    /* FLEXBOX: Center the pattern text
+       - Useful when pattern has multiple letters */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 
+====================================
+SCORE DISPLAY
+====================================
+Shows current score, target, and missed patterns
+JavaScript changes textContent and color dynamically
+*/
+#score {
+    /* TYPOGRAPHY: Medium-large bold text */
+    font-size: 48px;
+    font-weight: bold;
+    
+    /* SPACING: Add vertical space above and below
+       - First value (30px) = top and bottom
+       - Second value (0) = left and right */
+    margin: 30px 0;
+}
+
+/* 
+====================================
+INSTRUCTIONS TEXT
+====================================
+Static instructions for the player
+Smaller text that doesn't change during gameplay
+*/
+#instructions {
+    /* TYPOGRAPHY: Smaller readable text */
+    font-size: 20px;
+}
+
+/* 
+====================================
+CSS SELECTORS EXPLAINED
+====================================
+
+ID SELECTOR (#):
+- #pattern selects element with id="pattern"
+- IDs should be unique on the page
+- Used when selecting one specific element
+
+ELEMENT SELECTOR:
+- body selects all <body> elements (usually just one)
+- Used for general HTML elements
+
+====================================
+CSS PROPERTIES USED
+====================================
+
+TYPOGRAPHY:
+- font-family: Which font to use
+- font-size: Size of text (px = pixels)
+- font-weight: bold = thick text
+
+LAYOUT:
+- margin: Space OUTSIDE element
+- padding: Space INSIDE element (not used here)
+- display: flex = flexbox layout system
+- align-items: Vertical alignment in flexbox
+- justify-content: Horizontal alignment in flexbox
+- text-align: How text aligns (left/center/right)
+
+SIZING:
+- height: How tall element is
+- min-height: Minimum height (can grow larger)
+- width: How wide element is (not used here)
+
+OTHER:
+- background: Background color
+- overflow: What happens when content is too big
+- color: Text color (set by JavaScript in this case)
+
+====================================
+UNITS USED
+====================================
+- px (pixels): Fixed size, doesn't change
+- vh (viewport height): Relative to screen height
+  - 100vh = 100% of screen height
+  - 50vh = 50% of screen height
+*/
